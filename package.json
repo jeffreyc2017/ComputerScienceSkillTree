@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "css-loader": "^6.10.0",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.2"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch",
+    "start": "webpack serve --env environment=dev --open"
+  },
+  "dependencies": {
+    "d3": "^7.8.5",
+    "docsify-cli": "^4.4.4",
+    "js-yaml": "^4.1.0"
+  }
+}

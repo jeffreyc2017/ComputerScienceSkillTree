@@ -1,28 +1,37 @@
 // Code example from https://observablehq.com/@d3/collapsible-tree?intent=fork
 
+import yaml from 'js-yaml';
 
 // Define the draw function
 async function draw(data) {
   // Specify the charts’ dimensions. The height is variable, depending on the layout.
   const width = window.innerWidth;
-  const marginTop = 10;
-  const marginRight = 10;
-  const marginBottom = 10;
-  const marginLeft = 100;
+  const marginTop = 20;
+  const marginRight = 20;
+  const marginBottom = 20;
+  const fontSize = 20;
+  const marginLeft = fontSize * 16;
 
   // Rows are separated by dx pixels, columns by dy pixels. These names can be counter-intuitive
   // (dx is a height, and dy a width). This because the tree must be viewed with the root at the
   // “bottom”, in the data domain. The width of a column is based on the tree’s height.
   const root = d3.hierarchy(data);
-  const dx = 10;
+  const dx = fontSize;
   const dy = (width - marginRight - marginLeft) / (1 + root.height);
 
   // Define the tree layout and the shape for links.
   const tree = d3.tree().nodeSize([dx, dy]);
   const diagonal = d3.linkHorizontal().x(d => d.y).y(d => d.x);
 
-  // Create the SVG container, a layer for the links and a layer for the nodes.
-  const svg = d3.select("svg")
+  // Create a container div for the SVG
+  const container = d3.select("body")
+    .append("div")
+    .style("overflow", "auto")
+    .style("width", "100%")
+    .style("height", "100%");
+
+  // Create the SVG element inside the container
+  const svg = container.append("svg")
     .attr("width", width)
     .attr("height", dx)
     .attr("viewBox", [-marginLeft, -marginTop, width, dx])
@@ -37,7 +46,6 @@ async function draw(data) {
   const gNode = svg.append("g")
     .attr("cursor", "pointer")
     .attr("pointer-events", "all");
-
 
   function update(event, source) {
     const duration = event?.altKey ? 2500 : 250; // hold the alt key to slow down the transition
@@ -85,6 +93,7 @@ async function draw(data) {
       .attr("dy", "0.31em")
       .attr("x", d => d._children ? -6 : 6)
       .attr("text-anchor", d => d._children ? "end" : "start")
+      .style("font-size", `${fontSize}px`)
       .text(d => d.data.name)
       .clone(true).lower()
       .attr("stroke-linejoin", "round")
@@ -149,11 +158,25 @@ async function draw(data) {
 // Wrap the code inside an async function to use await
 async function main() {
   // Load skill tree data from JSON file
-  const data = await d3.json("data/skill-tree.json");
+  // const data = await d3.json("data/skill-tree.json");
 
   // Call the draw function with the loaded data
-  draw(data);
+  // draw(data);
+
+  try {
+    // Fetch YAML data from the server
+    const response = await fetch('data/skill-tree.yaml');
+    const yamlData = await response.text();
+
+    // Parse YAML data
+    const parsedYAML = yaml.load(yamlData);
+
+    // Draw the skill tree using parsed YAML data
+    draw(parsedYAML);
+  } catch (error) {
+    console.error('Error fetching or parsing YAML data:', error);
+  }
 }
 
 // Call the main function
-main();
+document.addEventListener('DOMContentLoaded', main);

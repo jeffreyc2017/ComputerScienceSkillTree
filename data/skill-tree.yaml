@@ -1,0 +1,245 @@
+name: Computer Science
+children:
+  - name: Programming Languages
+    children:
+      - name: General Purpose
+        children:
+          - name: Java
+          - name: Python
+          - name: C#
+          - name: C++
+          - name: JavaScript
+          - name: Ruby
+          - name: Swift
+          - name: Kotlin
+          - name: Go
+          - name: Rust
+      - name: Functional
+        children:
+          - name: Haskell
+          - name: Scala
+          - name: Erlang
+          - name: Clojure
+          - name: F#
+      - name: Scripting
+        children:
+          - name: Bash
+          - name: PowerShell
+          - name: Perl
+          - name: Ruby
+      - name: Markup
+        children:
+          - name: HTML
+          - name: XML
+          - name: Markdown
+      - name: Mobile Development
+        children:
+          - name: Flutter
+          - name: Dart
+          - name: Swift (iOS)
+          - name: Kotlin (Android)
+  - name: Web Development
+    children:
+      - name: Frontend
+        children:
+          - name: HTML
+          - name: CSS
+          - name: JavaScript
+          - name: React
+          - name: Angular
+          - name: Vue.js
+      - name: Backend
+        children:
+          - name: Node.js
+          - name: Django
+          - name: Flask
+          - name: Spring
+          - name: Ruby on Rails
+          - name: ASP.NET
+      - name: Full Stack
+      - name: Database
+        children:
+          - name: SQL
+          - name: MySQL
+          - name: PostgreSQL
+          - name: MongoDB
+          - name: Redis
+          - name: SQLite
+  - name: Data Science
+    children:
+      - name: Machine Learning
+        children:
+          - name: Supervised Learning
+          - name: Unsupervised Learning
+          - name: Reinforcement Learning
+          - name: Deep Learning
+          - name: Natural Language Processing
+          - name: Computer Vision
+      - name: Statistics
+      - name: Data Visualization
+        children:
+          - name: Matplotlib
+          - name: Seaborn
+          - name: Plotly
+          - name: D3.js
+      - name: Big Data
+        children:
+          - name: Hadoop
+          - name: Spark
+          - name: Kafka
+          - name: Hive
+          - name: HBase
+  - name: Cybersecurity
+    children:
+      - name: Cryptography
+      - name: Network Security
+      - name: Web Application Security
+      - name: Ethical Hacking
+      - name: Incident Response
+  - name: Operating Systems
+    children:
+      - name: Linux
+      - name: Windows
+      - name: macOS
+      - name: Unix
+  - name: Cloud Computing
+    children:
+      - name: Amazon Web Services (AWS)
+      - name: Microsoft Azure
+      - name: Google Cloud Platform (GCP)
+      - name: Docker
+      - name: Kubernetes
+      - name: Serverless Computing
+  - name: Computer Networking
+    children:
+      - name: TCP/IP
+      - name: DNS
+      - name: HTTP/HTTPS
+      - name: LAN/WAN
+      - name: Routing Protocols
+      - name: Firewalls
+      - name: Wireless Networking
+  - name: Algorithms and Data Structures
+    children:
+      - name: Sorting Algorithms
+      - name: Searching Algorithms
+      - name: Graph Algorithms
+      - name: Tree Data Structures
+      - name: Hashing
+      - name: Dynamic Programming
+      - name: Arrays
+      - name: Linked Lists
+      - name: Stacks
+      - name: Queues
+      - name: Trees
+      - name: Graphs
+      - name: Dynamic Programming
+      - name: Big O Notation
+  - name: Software Engineering
+    children:
+      - name: Agile Methodology
+      - name: Scrum
+      - name: Kanban
+      - name: Continuous Integration/Continuous Deployment (CI/CD)
+      - name: Test-Driven Development (TDD)
+      - name: Object-Oriented Design (OOD)
+      - name: Design Patterns
+      - name: Refactoring
+      - name: Code Review
+      - name: Version Control (Git, SVN)
+  - name: Computer Hardware
+    children:
+      - name: CPU Architecture
+      - name: Memory (RAM)
+      - name: Storage (HDD, SSD)
+      - name: Motherboards
+      - name: Graphics Processing Unit (GPU)
+      - name: Input/Output Devices
+      - name: Networking Hardware
+      - name: Embedded Systems
+        children:
+          - name: Arduino
+            children:
+              - name: Arduino IDE
+              - name: Arduino Programming
+              - name: Arduino Libraries
+              - name: Arduino Shields
+              - name: Arduino Projects
+          - name: STM32
+            children:
+              - name: STM32CubeIDE
+              - name: STM32 HAL
+              - name: STM32CubeMX
+              - name: STM32 Programming
+              - name: STM32 Projects
+          - name: Raspberry Pi
+            children:
+              - name: Raspberry Pi OS
+              - name: GPIO Programming
+              - name: Raspberry Pi Projects
+          - name: Microcontrollers
+  - name: Artificial Intelligence
+    children:
+      - name: Expert Systems
+      - name: Knowledge Representation
+      - name: Natural Language Processing
+      - name: Machine Learning
+      - name: Deep Learning
+      - name: Computer Vision
+      - name: Robotics
+      - name: Ethical AI
+  - name: Mathematics
+    children:
+      - name: Algebra
+      - name: Calculus
+      - name: Probability and Statistics
+      - name: Discrete Mathematics
+      - name: Linear Algebra
+      - name: Numerical Methods
+      - name: Graph Theory
+      - name: Optimization
+  - name: IT Roles
+    children:
+      - name: Software Engineer
+        children:
+          - name: Frontend Developer
+          - name: Backend Developer
+          - name: Full Stack Developer
+          - name: Mobile App Developer
+          - name: DevOps Engineer
+      - name: Data Scientist
+        children:
+          - name: Machine Learning Engineer
+          - name: Data Analyst
+          - name: Business Intelligence Analyst
+          - name: Data Engineer
+      - name: Cybersecurity Analyst
+        children:
+          - name: Ethical Hacker
+          - name: Security Consultant
+          - name: Incident Responder
+          - name: Penetration Tester
+      - name: System Administrator
+        children:
+          - name: Linux Administrator
+          - name: Windows Administrator
+          - name: Network Administrator
+          - name: Cloud Administrator
+      - name: Network Engineer
+        children:
+          - name: Network Architect
+          - name: Network Administrator
+          - name: Network Security Engineer
+          - name: Wireless Network Engineer
+      - name: Site Reliability Engineer (SRE)
+        children:
+          - name: Incident Management
+          - name: Service Level Objectives (SLOs)
+          - name: Error Budgets
+          - name: Automation and Tooling
+      - name: Engineering Manager
+        children:
+          - name: Team Leadership
+          - name: Project Management
+          - name: Performance Evaluation
+          - name: Resource Allocation
